@@ -1,0 +1,38 @@
+---
+---
+
+@import "minima";
+
+$ot-theme-color: #2757A3;
+
+.site-header {
+  background-color: lighten($ot-theme-color, 56%);
+  border-bottom-color: lighten($ot-theme-color, 40%);
+  border-bottom-style: dashed;
+  padding-top: 36px;
+  padding-bottom: 12px;
+  min-height: 0;
+}
+
+.site-title--weblog {
+  color: lighten($ot-theme-color, 25%);
+}
+
+.site-title--of {
+  font-style: italic;
+}
+
+.site-title--me {
+  font-weight: 400;
+}
+
+.site-title {
+  display: inline-block;
+  float: none;
+  line-height: 1.25em;
+}
+
+.site-title:hover {
+  box-shadow: inset 0 -10px 0 lighten($ot-theme-color, 47%);
+  text-decoration: none;
+}
