@@ -36,3 +36,11 @@ $ot-theme-color: #2757A3;
   box-shadow: inset 0 -10px 0 lighten($ot-theme-color, 47%);
   text-decoration: none;
 }
+
+.footer-col-right {
+  float: right;
+}
+
+.footer-col-summary {
+  font-size: 14px;
+}

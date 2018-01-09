@@ -4,22 +4,16 @@
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
-            </li>
-            {% if site.email %}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
-        </ul>
+
+      <div class="footer-col footer-col-3 footer-col-summary">
+        <p>
+          I am a web developer based in Denmark.
+          <br>
+          Here I'll share my ideas, thoughts and experiences mainly about building software.
+        </p>
       </div>
 
-      <div class="footer-col footer-col-2">
+      <div class="footer-col footer-col-right">
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
@@ -35,9 +29,6 @@
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
-      </div>
     </div>
 
   </div>
