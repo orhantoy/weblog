@@ -1,0 +1,44 @@
+---
+title: Up-to-date
+date: 2018-03-25 12:00:00 +0200
+categories: rails software-dependencies
+---
+
+Staying up-to-date with the technology you use is a real challenge. Especially if the technology at hand is popular and companies depend on it - because this usually also means that the technology is being actively maintained and further developed.
+
+So should we then just use unpopular, abandoned technology so we can avoid the never-ending race of keeping our technology stack up-to-date? Of course not.
+
+The pace of change in Ruby and RoR is a healthy one where things are gradually getting better and more mature without changing *everything* and potentially leaving too many people behind. But still is it worth spending time on upgrading to the latest version of Rails + all the other gems you're using in your [monolith](https://m.signalvnoise.com/the-majestic-monolith-29166d022228)?
+
+My take on this is: if your app is being actively worked on, **it is worth it**.
+
+## Easy upgrading
+
+Upgrading a dependency to a major version change can be a lot of work. Having [less dependencies]({% post_url 2018-03-01-gem-less %}) will be a good start, having less code will be an even better start.
+
+The upgrade path will also be relatively painless if you're sticking to the standard way of using a framework like Rails. Non-`ActiveRecord` ORMs and RSpec are examples of dependencies that can complicate upgrades because they themselves depend on Rails.
+
+Specifically for RoR there is an [upgrade guide](http://guides.rubyonrails.org/upgrading_ruby_on_rails.html) which is a good starting point.
+
+## Preparation
+
+You can often prepare for a major upgrade: I was involved in a project where we wanted to upgrade from Rails 3 to 4. One of the steps we took was to pull in the `strong_parameters` gem so our Rails 3 app would be ready for the Rails 4 upgrade, at least in terms of the controller parameters whitelisting.
+
+You should look for changes you can implement in the current version of your app which will work now and in the target version.
+
+- Pulling in `strong_parameters` is a good example.
+- Fixing deprecation warnings is also a good way to prepare for an upgrade.
+- Having a sufficient test suite will obviously also help a lot.
+
+You usually cannot prepare for every upcoming change *before* doing the actual upgrade. This can mean that you would have to have a long-running branch which is usually not a good idea. GitHub handled this problem by basically having an ENV-var to control the Rails version; you can read more about how they did this [here](http://shayfrendt.com/posts/upgrading-github-to-rails-3-with-zero-downtime/).
+
+## Benefits
+
+So when you get there, what are the actual benefits of keeping your technology stack up-to-date?
+
+- Documentation for the latest version is always easier to find.
+- You can take advantage of the latest features.
+- You will be more excited because you can actually use the new cool feature you're reading about.
+- Exposing your app to the latest version means you're also more likely to run in to bugs which is a good opportunity to contribute back.
+
+If your app is up-to-date it is a good sign that you care and caring about upgrades will lead you to revise your code base *more often*. Iterating and revising your code base will hopefully lead to a more maintainable code base which you *keep* enjoying working on - the ultimate goal for any long-running code base.
