@@ -58,3 +58,7 @@ end
 ```
 
 we get the expected result.
+
+----------------
+<br>
+In [this Gist](https://gist.github.com/orhantoy/406d18505e677a7e55797e8932395a95) I have highlighted the issue with an [executable test case](http://edgeguides.rubyonrails.org/contributing_to_ruby_on_rails.html).
