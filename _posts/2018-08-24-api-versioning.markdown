@@ -75,7 +75,7 @@ If you at some point decide that the `date` parameter should now be required, th
 
 I think something like this could be handled by introducing a different code path for the same endpoint that tests a HTTP header, e.g. `X-Require-Post-Date: true`. Ideally you would log which clients/tokens have started using the header and which clients who have not migrated yet so you can reach out to the affected companies. Ultimately you would most likely enforce the new implementation and just ignore the header.
 
-In this case something like API-versioning makes a lot of case but if you think it through it still comes at a cost:
+In this case something like API-versioning makes a lot of sense but if you think it through it still comes at a cost:
 
 - When reading data you can't tell if the `date` will be there or not, it depends on the API version.
 - The domain model and database constraints can not actually be changed because you would always have to support the nullable `date`.
