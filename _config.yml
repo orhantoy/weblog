@@ -17,6 +17,7 @@ author: Orhan Toy
 title: Weblog of Orhan Toy
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: ""
 twitter_username: orhantoy
 github_username:  orhantoy
 
