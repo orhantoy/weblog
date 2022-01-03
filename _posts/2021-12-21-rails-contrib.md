@@ -20,7 +20,7 @@ class CrawlConfig
 end
 ```
 
-Looks like it should work but it turns out that the numericality validator in Rails does not require `max_crawl_depth` to be actual `Numeric` value - a string that looks like a number would also work. But if we ended up accepting a string value, we would have a potential issue further down in the execution of the program.
+Looks like it should work but it turns out that the numericality validator in Rails does not require `max_crawl_depth` to be an actual `Numeric` value - a string that looks like a number would also work. But if we ended up accepting a string value, we would have a potential issue further down in the execution of the program.
 
 I saw this as an opportunity to propose a contribution to Rails. Where do you start with something like that?
 
