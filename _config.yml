@@ -27,8 +27,8 @@ permalink: /:year/:month/:day/:title:output_ext
 markdown: kramdown
 theme: minima
 
-# plugins:
-#   - jekyll-feed
+plugins:
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
